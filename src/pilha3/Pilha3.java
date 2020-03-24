@@ -1,14 +1,16 @@
 
-package pilha3;
+package pilha;
 
-public class Pilha3 {
+public class Pilha {
     private int topo;
     private int dados[];
     private int MAX;
-
-    public Pilha3() {
+    
+    private Pilha() {}
+    
+    public Pilha(int n) {
         this.topo = -1;
-        this.MAX = 3;
+        this.MAX = n;
         this.dados = new int [MAX];
         
     }
@@ -53,16 +55,9 @@ public class Pilha3 {
         }
     }
     
-//    public void cria_pilha(int n){
-//        MAX = n;
-//        System.out.println(MAX);
-//        
-//    }
-    
     
     public static void main(String[] args) {
-        Pilha3 p = new Pilha3();
-       // p.cria_pilha(3);
+        Pilha p = new Pilha(3);
         System.out.println(p.vazia());
         System.out.println(p.cheia());
         p.empilha(1);
